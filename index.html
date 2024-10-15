@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kopytko 3G</title>
     <script langauge="JavaScript">
+        const data = "toolbar=no,directories=no,menubar=no,height=380px,width=160px,top=200,left=200";
+
+        function WinOpen_z1(){
+            window.open("zadanie1_kop.html","okienko_z1",data);
+        }
         function WinOpen_z2(){
-            window.open("zadanie2_kop.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200")
+            window.open("zadanie2_kop.html","okienko_z2",data);
         }
         function WinOpen_z3(){
-            window.open("zadanie3_kop.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+            window.open("zadanie3_kop.html","okienko_z3",data);
         }
         function WinOpen_z4(){
-            window.open("zadanie4_kop.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+            window.open("zadanie4_kop.html","okienko_z4",data);
         }
+        
     </script>
 </head>
 <body>
@@ -21,6 +27,7 @@
         Szkielet zaliczeniowy JavaScript Mikołaj Kopytko klasa 3G
     </h1>
     <form>
+        <input type="button" name="zadanie1" value="zadanie1-kop" onclick="WinOpen_z1()">
         <input type="button" name="zadanie2" value="zadanie2-kop" onclick="WinOpen_z2()">
         <input type="button" name="zadanie3" value="zadanie3-kop" onclick="WinOpen_z3()">
         <input type="button" name="zadanie4" value="zadanie4-kop" onclick="WinOpen_z4()">
