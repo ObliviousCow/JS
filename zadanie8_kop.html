@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopytko</title>
+    <script lang="JavaScript">
+        function show_confirm(){
+            if (confirm("Naciśnij klawisz")) { 
+                document.write("Nacisnąłeś OK!"); 
+            } else { 
+                document.write("Nacisnąłeś Cancel!"); 
+            }
+        } 
+    </script>
+</head>
+<body>
+    <b>Zastosowanie:</b><br>
+    Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych. <br>
+Użytkownik musi nacisnąć „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia. <br> 
+Jeżeli zostanie wybrane „OK.” metoda zwraca true w przeciwnym wypadku false <br>
+    <input type="button" value="Pokaż Confirm Box" onclick="show_confirm()">
+</body>
+</html>

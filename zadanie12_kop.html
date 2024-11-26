@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopytko</title>
+</head>
+<body>
+    <div style="color:green;font-size: 33px;">
+        <script language="JavaScript">
+            var dzien1 = prompt("Dzien1=","");
+            var godz1 = prompt("Godzina1=","");
+            var dzien2 = prompt("Dzien2=","");
+            var godz2 = prompt("Godzina2=","");
+            
+            var D1_kop = parseFloat(dzien1);
+            var D2_kop = parseFloat(dzien2);
+            var G1_kop = parseFloat(godz1);
+            var G2_kop = parseFloat(godz2);
+
+            let sekundy = (dzien1 - dzien2) * 24 * 3600 + (godz1 - godz2) * 3600;
+
+            document.write("Dzien1=" +D1_kop+"<br>");
+            document.write("Dzien2=" +D2_kop+"<br>");
+            document.write("Godzina1="+G1_kop+"<br>");
+            document.write("Godzina2="+G2_kop+"<br>");
+            document.write("Sekund=" +sekundy+" sek"+"<br>");
+        </script>
+    </div>
+</body>
+</html>

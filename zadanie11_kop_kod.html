@@ -1,0 +1,30 @@
+<body>
+    <textarea spellcheck="false" readonly align="center">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Kopytko</title>
+        </head>
+        <body>
+            <div style="color:green;font-size: 33;">
+                <script language="JavaScript">
+                    var dzien1 = prompt("Dzien1=","");
+                    var dzien2 = prompt("Dzien2=","");
+                    var ilosc_sekund;
+                    
+                    var D1_kop = parseFloat(dzien1);
+                    var D2_kop = parseFloat(dzien2);
+                    
+                    ilosc_sekund=(D1_kop-D2_kop) * 24 * 3600;
+                    
+                    document.write("Dzien1=" +D1_kop+"<br>");
+                    document.write("Dzien2=" +D2_kop+"<br>");
+                    document.write("Sekund=" +ilosc_sekund+" sek"+"<br>");
+                </script>
+            </div>
+        </body>
+        </html>
+    </textarea>
+</body>

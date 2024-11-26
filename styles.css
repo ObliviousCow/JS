@@ -2,27 +2,73 @@ body {
     width: auto;
     height: auto;
     margin: auto;
-    background: linear-gradient(94deg, rgb(52, 48, 114,1) 0%, rgba(55,55,101,1) 41%, rgba(92,90,107,1) 100%);
+    background: linear-gradient(94deg, rgb(52, 48, 114,1) 0%, rgba(55,55,101,1) 40%, rgba(92,90,107,1) 100%);
 }
-
 h1 {
     font-size: 2cm;
     text-align: center;
     color: rgb(41, 40, 48);
     text-shadow: 1px 1px 1px rgb(0, 0, 0), 0 0 25px rgb(59, 59, 90);
 }
-form {
-    margin-left: 28%;
+.Outside {
+    color: rgb(202, 201, 255);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px 20px 20px 20px;
+}
+.Inside {
+    width: 600px;
+    height: fit-content;
+    margin: 0px auto;
+    margin-top: 20px;
+    padding: 1%;
+    background: rgb(41, 40, 48);
+    border-radius: 20px;
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.Inside::after, .Inside::before{
+    content : '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), rgba(255,100,100,1) 0%,rgba(255,150,100,1) 20%, rgba(255,255,100,1) 40%, rgba(100,255,100,1) 60%, rgba(100,100,255,1) 80%, rgba(255,100,100,1) 100%);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+}
+.Inside::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
 }
 input[type=button] {
     height: 40px;
-    width: 10%;
+    width: 110px;
     border-radius: 5px;
     color: rgb(202, 201, 255);
-    font-size: 100%;
+    font-size: 20px;
     background-color: rgb(59, 59, 90);
     transition-duration: .2s;
     margin-bottom: 5px;
+    box-shadow: 2px 5px 5px rgb(41, 40, 48);
+    
 }
 input[type=button]:hover {
     background-color: rgb(41, 40, 48);
