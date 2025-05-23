@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kopytko</title>
+</head>
+<body>
+    <h2>Oblicz długości boków trójkąta</h2>
+    <form>
+        Punkt A: x = <input type="text" id="xa_kop"> y = <input type="text" id="ya_kop"><br>
+        Punkt B: x = <input type="text" id="xb_kop"> y = <input type="text" id="yb_kop"><br>
+        Punkt C: x = <input type="text" id="xc_kop"> y = <input type="text" id="yc_kop"><br>
+        <input type="button" value="Oblicz AB" onclick="AB_kop()">
+        <input type="button" value="Oblicz BC" onclick="BC_kop()">
+        <input type="button" value="Oblicz AC" onclick="AC_kop()">
+    </form>
+    <p id="wynik"></p><br>
+    
+    
+    <script>
+        function AB_kop() {
+            var xa = parseFloat(document.getElementById("xa_kop").value);
+            var ya = parseFloat(document.getElementById("ya_kop").value);
+            var xb = parseFloat(document.getElementById("xb_kop").value);
+            var yb = parseFloat(document.getElementById("yb_kop").value);
+            var ab = Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+            document.getElementById("wynik").innerHTML = "Długość AB: " + ab.toFixed(2);
+        }
+        
+        function BC_kop() {
+            var xb = parseFloat(document.getElementById("xb_kop").value);
+            var yb = parseFloat(document.getElementById("yb_kop").value);
+            var xc = parseFloat(document.getElementById("xc_kop").value);
+            var yc = parseFloat(document.getElementById("yc_kop").value);
+            var bc = Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+            document.getElementById("wynik").innerHTML = "Długość BC: " + bc.toFixed(2);
+        }
+        
+        function AC_kop() {
+            var xa = parseFloat(document.getElementById("xa_kop").value);
+            var ya = parseFloat(document.getElementById("ya_kop").value);
+            var xc = parseFloat(document.getElementById("xc_kop").value);
+            var yc = parseFloat(document.getElementById("yc_kop").value);
+            var ac = Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+            document.getElementById("wynik").innerHTML = "Długość AC: " + ac.toFixed(2);
+        }
+    </script>
+</body>
+</html>

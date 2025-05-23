@@ -1,0 +1,42 @@
+<body>
+    <textarea spellcheck="false" readonly align="center">
+        <!DOCTYPE html>
+
+        <head>
+            <title> Kopytko </title>
+            <meta charset="utf-8">
+        </head>
+
+        <body>
+            <div style="color:navy;font-size:50px;">
+                <script language="JavaScript">
+                    var a = parseFloat(prompt("a=", ""));
+                    var b = parseFloat(prompt("b=", ""));
+                    function suma_kop(a, b) {
+                        return a + b;
+                    }
+                    function odejmowanie_kop(a, b) {
+                        return a - b;
+                    }
+                    function mnozenie_kop(a, b) {
+                        return a * b;
+                    }
+                    function od_kwadratu_kop(a, b) {
+                        return a ^ 2;
+                        return b ^ 2;
+                    }
+                    function reszta_z_dzielenia_kop(a, b) {
+                        return a / b;
+                    }
+                    document.write("suma=" + suma_kop(a, b) + "<br>");
+                    document.write("odejmowanie=" + odejmowanie_kop(a, b) + "<br>");
+                    document.write("mnożenie=" + mnozenie_kop(a, b) + "<br>");
+                    document.write("od kwadratu=" + od_kwadratu_kop(a, b) + "<br>");
+                    document.write("reszta z dzielenia=" + reszta_z_dzielenia_kop(a, b) + "<br>");
+                </script>
+            </div>
+        </body>
+
+        </html>
+    </textarea>
+</body>

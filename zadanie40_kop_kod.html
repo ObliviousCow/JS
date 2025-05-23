@@ -1,0 +1,86 @@
+<body>
+    <textarea spellcheck="false" readonly align="center">
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Kopytko</title>
+        </head>
+
+        <body>
+            <h2>Proste Obliczenia</h2><br>
+            <br>
+            <h2>Kopytko 3g</h2>
+            <p>Podaj dwie liczby:</p>
+            <input type="text" id="a_kop" placeholder="Liczba A">
+            <input type="text" id="b_kop" placeholder="Liczba B"><br><br>
+            <button onclick="suma_kop()">Dodaj</button>
+            <button onclick="roznica_kop()">Odejmij</button>
+            <button onclick="iloczyn_kop()">Pomnóż</button>
+            <button onclick="iloraz_kop()">Podziel</button>
+
+            <div id="wynik" style="margin-top:20px; font-size: 20px; color: darkgreen;"></div>
+
+            <script>
+                function getInput() {
+                    let a = document.getElementById("a_kop").value;
+                    let b = document.getElementById("b_kop").value;
+                    return [a, b];
+                }
+
+                function sprawdzenie_kop(a, b, dzielenie = false) {
+                    if (a === "" || b === "") {
+                        return "Proszę uzupełnić obie liczby.";
+                    }
+                    if (dzielenie && parseFloat(b) === 0) {
+                        return "Nie wolno dzielić przez zero.";
+                    }
+                    return null;
+                }
+
+                function suma_kop() {
+                    let [a, b] = getInput();
+                    let err = sprawdzenie_kop(a, b);
+                    if (err) return pokazBlad(err);
+                    let wynik = parseFloat(a) + parseFloat(b);
+                    pokazWynik(wynik);
+                }
+
+                function roznica_kop() {
+                    let [a, b] = getInput();
+                    let err = sprawdzenie_kop(a, b);
+                    if (err) return pokazBlad(err);
+                    let wynik = parseFloat(a) - parseFloat(b);
+                    pokazWynik(wynik);
+                }
+
+                function iloczyn_kop() {
+                    let [a, b] = getInput();
+                    let err = sprawdzenie_kop(a, b);
+                    if (err) return pokazBlad(err);
+                    let wynik = parseFloat(a) * parseFloat(b);
+                    pokazWynik(wynik);
+                }
+
+                function iloraz_kop() {
+                    let [a, b] = getInput();
+                    let err = sprawdzenie_kop(a, b, true);
+                    if (err) return pokazBlad(err);
+                    let wynik = parseFloat(a) / parseFloat(b);
+                    pokazWynik(wynik);
+                }
+
+                function pokazBlad(tekst) {
+                    document.getElementById("wynik").innerHTML = `<span style="color:red;">${tekst}</span>`;
+                }
+
+                function pokazWynik(wynik) {
+                    document.getElementById("wynik").innerHTML = `Wynik działania wynosi: ${wynik.toFixed(2)}`;
+                }
+            </script>
+        </body>
+
+        </html>
+    </textarea>
+</body>

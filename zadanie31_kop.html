@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var mebel = {
+            rodzaj: 'łóżko',
+            material: 'drewno',
+            wiek: 4,
+            kolor: 'biały',
+            Show_Kopytko: function () {
+                document.write(this.rodzaj + ' ' + this.kolor)
+            }
+        }
+        mebel.ocena = '5';
+        mebel.wypisz = function () { alert('Ocena:' + this.ocena) }
+        mebel.wypisz()
+        mebel.Show_Kopytko();
+    </script>
+</head>
+
+<body>
+    <br>
+    Programowanie obiektowe. <br>
+    Obiekt to mebel<br>
+    Pola:<br>
+    Rodzaj<br>
+    Mareriał<br>
+    Kolor<br>
+    metoda: Show_Kopytko<br>
+    nowe pole to: ocena<br>
+    nowa meoda to: wypisz<br>
+</body>
+
+</html>

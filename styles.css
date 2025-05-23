@@ -18,7 +18,7 @@ h1 {
     margin: 20px 20px 20px 20px;
 }
 .Inside {
-    width: 600px;
+    width: 800px;
     height: fit-content;
     margin: 0px auto;
     margin-top: 20px;
@@ -60,7 +60,7 @@ h1 {
 }
 input[type=button] {
     height: 40px;
-    width: 110px;
+    width: 150px;
     border-radius: 5px;
     color: rgb(202, 201, 255);
     font-size: 20px;
